@@ -41,6 +41,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Mobile Menu Behavior: Close on click
+  const navLinks = document.querySelectorAll(".nav-link-custom");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navbarCollapse.classList.contains("show")) {
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+          toggle: true,
+        });
+      }
+    });
+  });
+
   /* -------------------------------------------------------------------------- */
   /*                               Initial Load Sequences                       */
   /* -------------------------------------------------------------------------- */
