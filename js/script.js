@@ -30,16 +30,27 @@ document.addEventListener("DOMContentLoaded", () => {
   /* -------------------------------------------------------------------------- */
 
   const navbar = document.querySelector(".navbar");
+  let isNavScrolled = false;
+  let ticking = false;
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add("navbar-scrolled", "shadow-sm", "py-2");
-      navbar.classList.remove("pt-4");
-    } else {
-      navbar.classList.remove("navbar-scrolled", "shadow-sm", "py-2");
-      navbar.classList.add("pt-4");
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrolled = window.scrollY > 50;
+        if (scrolled && !isNavScrolled) {
+          navbar.classList.add("navbar-scrolled", "shadow-sm", "py-2");
+          navbar.classList.remove("pt-4");
+          isNavScrolled = true;
+        } else if (!scrolled && isNavScrolled) {
+          navbar.classList.remove("navbar-scrolled", "shadow-sm", "py-2");
+          navbar.classList.add("pt-4");
+          isNavScrolled = false;
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
-  });
+  }, { passive: true });
 
   /* -------------------------------------------------------------------------- */
   /*                               Initial Load Sequences                       */
