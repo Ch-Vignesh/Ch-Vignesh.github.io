@@ -51,4 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (heroText) heroText.classList.add("active");
     if (heroImg) heroImg.classList.add("active");
   }, 100);
+
+  /* -------------------------------------------------------------------------- */
+  /*                               Copyright Year                               */
+  /* -------------------------------------------------------------------------- */
+  const yearSpan = document.getElementById("current-year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
 });
