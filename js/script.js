@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+const init = () => {
   /* -------------------------------------------------------------------------- */
   /*                               Scroll Animations                            */
   /* -------------------------------------------------------------------------- */
@@ -51,4 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (heroText) heroText.classList.add("active");
     if (heroImg) heroImg.classList.add("active");
   }, 100);
-});
+};
+
+document.addEventListener("DOMContentLoaded", init);
+
+if (typeof module !== "undefined") {
+  module.exports = { init };
+}
