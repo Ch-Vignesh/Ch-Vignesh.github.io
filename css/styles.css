@@ -70,6 +70,10 @@ body {
   min-height: 90vh; /* Almost full height */
 }
 
+.hero-description {
+  max-width: 500px;
+}
+
 /* Profile Image */
 .profile-img {
   transition: transform 0.5s ease;
