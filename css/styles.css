@@ -137,12 +137,6 @@ body {
 .delay-100 {
   transition-delay: 0.1s;
 }
-.delay-200 {
-  transition-delay: 0.2s;
-}
-.delay-300 {
-  transition-delay: 0.3s;
-}
 
 /* Sticky Navbar on Scroll (optional JS hooks opacity) */
 .navbar-scrolled {
