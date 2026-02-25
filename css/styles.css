@@ -3,6 +3,7 @@
   --bg-color: #fafbfc; /* Clean off-white */
   --text-main: #111111;
   --text-sec: #666666;
+  --brand-color: #3b82f6; /* Tailwind-like blue */
   --accent-blue: rgba(59, 130, 246, 0.5); /* Tailwind-like blue */
   --glow-color: rgba(186, 215, 255, 0.4);
 }
@@ -171,7 +172,7 @@ body {
 }
 
 .social-icon-btn:hover {
-  color: #3b82f6; /* Accent blue */
+  color: var(--brand-color); /* Accent blue */
   transform: translateY(-3px);
 }
 
@@ -208,7 +209,7 @@ body {
 }
 
 .tech-item i {
-  color: #3b82f6;
+  color: var(--brand-color);
 }
 
 @keyframes scroll {
