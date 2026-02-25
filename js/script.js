@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
   /*                               Initial Load Sequences                       */
   /* -------------------------------------------------------------------------- */
   // Force trigger for hero elements if they are already in view (sometimes observer is lazy on load)
+  const heroText = document.querySelector(".reveal-text");
+  const heroImg = document.querySelector(".reveal-img");
   setTimeout(() => {
-    const heroText = document.querySelector(".reveal-text");
-    const heroImg = document.querySelector(".reveal-img");
     if (heroText) heroText.classList.add("active");
     if (heroImg) heroImg.classList.add("active");
   }, 100);
