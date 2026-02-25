@@ -3,7 +3,6 @@
   --bg-color: #fafbfc; /* Clean off-white */
   --text-main: #111111;
   --text-sec: #666666;
-  --accent-blue: rgba(59, 130, 246, 0.5); /* Tailwind-like blue */
   --glow-color: rgba(186, 215, 255, 0.4);
 }
 
